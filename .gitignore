@@ -1,3 +1,27 @@
 .venv/
 __pycache__/
 *.pyc
+
+# Python
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.codex
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
