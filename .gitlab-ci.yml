@@ -1,0 +1,19 @@
+stages:
+  - lint
+  - test
+
+default:
+  image: python:3.12
+  before_script:
+    - python -m pip install --upgrade pip
+    - python -m pip install -r requirements.txt
+
+lint:
+  stage: lint
+  script:
+    - python -m compileall src
+
+smoke-test:
+  stage: test
+  script:
+    - PYTHONPATH=src python -c "from gino.main import main; print('import ok')"
