@@ -15,7 +15,7 @@ source .venv/bin/activate
 
 ```bash
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
 ### 3) Verify PyGame installation
@@ -25,6 +25,24 @@ python -c "import pygame; print(pygame.version.ver)"
 ```
 
 If the command prints a version (for example `2.6.0`), your environment is ready.
+
+### 4) Run the game
+
+From the repository root:
+
+```bash
+python -m gino
+```
+
+After installing with `python -m pip install -e .`, you can also use:
+
+```bash
+gino
+```
+
+Avoid running from inside `src/gino` with `python -m main`. This project uses
+the standard `src/` layout, so the package import root is `src`, not
+`src/gino`.
 
 ## Project structure
 
