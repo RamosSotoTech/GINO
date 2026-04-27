@@ -44,6 +44,18 @@ Avoid running from inside `src/gino` with `python -m main`. This project uses
 the standard `src/` layout, so the package import root is `src`, not
 `src/gino`.
 
+## Runtime settings
+
+GINO loads user settings from an operating-system config folder and falls back
+to safe defaults when no file exists yet.
+
+- Linux: `~/.config/gino/settings.json`
+- macOS: `~/Library/Application Support/GINO/settings.json`
+- Windows: `%APPDATA%\GINO\settings.json`
+
+The current config shape lives in `src/gino/core/settings.py`. A future settings
+scene can update a `GameConfig` object and call `save_config()`.
+
 ## Project structure
 
 ```text
