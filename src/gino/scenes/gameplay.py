@@ -13,10 +13,10 @@ class GameplayScene(Scene):
 
     background_color = (20, 24, 35)
     player_color = (88, 242, 152)
-    player_rect: pygame.Rect = pygame.Rect(0, 0, 100, 100)
 
     def __init__(self, game: Game) -> None:
         self.game = game
+        self.player_rect: pygame.Rect = pygame.Rect(0, 0, 100, 100)
 
     def handle_event(self, event: pygame.event.Event) -> None:
         pass
