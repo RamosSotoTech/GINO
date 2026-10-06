@@ -141,7 +141,6 @@ class StartMenuScene(Scene):
             self.status_message = "Continue placeholder: no save data yet"
         elif selected_item.action == "new_game":
             self.game.active_scene = GameplayScene(self.game)
-            self.status_message = "New Game placeholder: gameplay scene coming soon"
         elif selected_item.action == "settings":
             self.status_message = "Settings placeholder: options scene coming soon"
 
